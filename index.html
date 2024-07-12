@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Design Assistant</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main id="main-parallax">
+      <img id="background-mountain" data-speedx="0.042" data-speedy="0.048" data-speedz="0" data-rotation="0" class="background-mountain background" src="./Images/background.png">
+      <img id="center-mountain" data-speedx="0.01" data-speedy="0.001" data-speedz="0.40" data-rotation="0.74" class="center-mountain background" src="./Images/mountain_2.png" height="750" width="650">
+      <img id="left-mountain" data-speedx="0.012" data-speedy="0.018" data-speedz="0.32" data-rotation="0.22" class="left-mountain background" src="./Images/mountain_1.png" height="700" width="600">
+      <img id="right-mountain" data-speedx="0.012" data-speedy="0.018" data-speedz="0.32" data-rotation="0.22" class="right-mountain background" src="./Images/mountain_3.png" height="600" width="500">
+      <img id="right-right-mountain" data-speedx="0.036" data-speedy="0.039" data-speedz="0.34" data-rotation="0.16" class="right-right-mountain background" src="./Images/mountain_8.png" height="700" width="400">
+      <img id="center-left-mountain" data-speedx="0.03" data-speedy="0.03" data-speedz="0.25" data-rotation="0.13" class="center-left-mountain background" src="./Images/mountain_4.png" height="700" width="800">
+      <img id="center-right-mountain" data-speedx="0.03" data-speedy="0.03" data-speedz="0.24" data-rotation="0.13" class="center-right-mountain background" src="./Images/mountain_5.png" height="600" width="500">
+      <img id="left-left-mountain" data-speedx="0.038" data-speedy="0.033" data-speedz="0.36" data-rotation="0.10" class="left-left-mountain background" src="./Images/mountain_7.png" height="800" width="500">
+      <img id="back-right-mountain" data-speedx="0.03" data-speedy="0.03" data-speedz="0.38" data-rotation="0.10" class="back-right-mountain background" src="./Images/mountain_9.png" height="600" width="400">
+      <img id="bottom-fog" data-speedx="0.001" data-speedy="0.005" data-speedz="0" data-rotation="0" class="bottom-fog background" src="./Images/black_shadow.png">
+      <img id="sun-rays" class="sun-rays" src="./Images/sun_rays.png" height="800" width="500">
+    </main>
+    <div class="app-title">
+      <h1>Hello Friend</h1>
+      <p>Select an item below.</p>
+    </div>
+    <div class="search-bar-parent">
+      <input class="search-bar" id="home-search" type="text" placeholder="Search...">
+    </div>
+    <div id="landing-page" class="landing-page">
+      <div class="left-card-parent"></div>
+      <div class="center-card-parent"></div>
+      <div class="right-card-parent"></div>
+    </div>
+    <button id="back-button" class="back-button">Back</button>
+    <div id="quiz-div" class="quiz-div">
+      <h1 id="quiz-header"></h1>
+      <h3 id="question-description-header" class="q-header"></h3>
+      <hr color="grey">
+      <p id="question-description" class="q-description"></p>
+      <h3 id="question-instruction-header" class="q-header"></h3>
+      <hr color="grey">
+      <p id="question-instruction" class="q-description"></p>
+      <h4 id="question-answers" class="q-answer-header"></h4>
+      <div id="questions" class="questions">
+      </div>
+    </div>
+    <script src="./ts-built/GlobalVariables.js"></script>
+    <script src="./ts-built/GlobalFunctions.js"></script>
+    <script src="./ts-built/LandingPageCardFunctions.js"></script>
+    <script src="./ts-built/BackgroundCalc.js"></script>
+    <script src="./ts-built/Cards.js"></script>
+    <script src="./ts-built/SearchBar.js"></script>
+    <script src="./ts-built/Quiz.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+"use strict";
+const leftCardTitles = ['Example Card 1', 'Example Card 2', 'Example Card 3'];
+const leftCardDescriptions = ['Description Example', 'Description Example', 'Description Example'];
+const leftCardOnClickFunc = ['', '', ''];
+const leftCardParent = document.querySelector('.left-card-parent');
+const centerCardTitles = ['Click Me', 'Example Card 2', 'Example Card 3', 'Example Card 4', 'Example Card 5'];
+const centerCardDescriptions = ['Test your Knowledge', 'Test your Knowledge', 'Test your Knowledge', 'Test your Knowledge', 'Test your Knowledge'];
+const centerCardOnClickFunc = ['startQuiz()', '', '', '', ''];
+const centerCardParent = document.querySelector('.center-card-parent');
+const rightCardTitles = ['Anything Works', 'When You Put', 'Your Mind To It'];
+const rightCardDescriptions = ['Description Example', 'Description Example', 'Description Example'];
+const rightCardOnClickFunc = ['', '', ''];
+const rightCardParent = document.querySelector('.right-card-parent');
+const questions = ['What is the distance from the Earth to the Sun in Miles?', 'What is the distance from the Earth to the Moon in Miles?'];
+const answers = ['54.805 million miles', '238,900 miles'];
+const placeholders = ['Ex. 54.805 million miles', 'Ex. 238,900 miles'];

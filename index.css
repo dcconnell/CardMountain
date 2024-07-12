@@ -1,0 +1,316 @@
+/* All animations are at the bottom to reference easier */
+
+body {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  margin: auto;
+  background-image: url('./Images/background.png');
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+}
+main {
+  position: relative;
+  background-color: #353;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: 0;
+}
+.background-mountain {
+  position: absolute;
+  width: 2800px;
+  top: calc(50% - 370px);
+  left: calc(50% + 10px);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.center-mountain{
+  top: calc(50% + 180px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  position: absolute;
+}
+.left-left-mountain{
+  position: absolute;
+  z-index: 1;
+  top: calc(50% + 100px);
+  left: calc(50% - 800px);
+  transform: translate(-50%, -50%);
+}
+.left-mountain{
+  position: absolute;
+  z-index: 3;
+  top: calc(50% + 200px);
+  left: calc(50% - 800px);
+  transform: translate(-50%, -50%);
+}
+.right-mountain{
+  position: absolute;
+  z-index: 3;
+  top: calc(50% + 230px);
+  left: calc(50% + 800px);
+  transform: translate(-50%, -50%);
+}
+.right-right-mountain {
+  top: calc(50% + 200px);
+  left: calc(50% + 650px);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  position: absolute;
+}
+.center-left-mountain {
+  top: calc(50% + 240px);
+  left: calc(50% - 665px);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  position: absolute;
+}
+.center-right-mountain {
+  top: calc(50% + 320px);
+  left: calc(50% + 340px);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  position: absolute;
+}
+.back-right-mountain {
+  top: calc(50% + 80px);
+  left: calc(50% + 1000px);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  position: absolute;
+}
+.sun-rays {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+}
+.bottom-fog{
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  top: calc(50% + 300px);
+  left: calc(50% + 1px);
+  transform: translate(-50%, -50%);
+}
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+}
+.landing-page {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10%;
+  top: 120px;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+}
+/* .landing-page .left-card-parent .center-card-parent .right-card-parent{
+  justify-content: center;
+} */
+.search-bar{
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  width: 300px;
+  height: 20px;
+}
+.left-card-parent, .center-card-parent, .right-card-parent {
+  width: 400px;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 400px;
+  height: 60px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  background-color: slategray;
+  color: #dddddd;
+  cursor: pointer;
+  margin: 1% 0 0 0;
+}
+.card .card-title {
+  margin-left: 1%;
+}
+.card .card-arrow {
+  margin-right: 1%;
+  font-size: 40px;
+}
+.card .card-description {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 1%;
+}
+.card-expand {
+  animation: expandHeight 250ms ease-in;
+  animation-fill-mode: forwards;
+}
+/* margin: top right bottom left */
+
+.quiz-div {
+  display: none;
+  margin: 0 20% 0 20%;
+  text-align: center;
+  border-left: 2px solid red;
+  z-index: 10;
+  position: relative;
+  background-color: antiquewhite;
+}
+.back-button {
+  display: none;
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  cursor: pointer;
+}
+.q-header {
+  text-align: left;
+  margin-left: 2%;
+  z-index: 10;
+}
+.q-description {
+  margin-bottom: 50px;
+  z-index: 10;
+}
+
+.q-answer-header {
+  text-align: left;
+  margin-left: 2%;
+  position: relative;
+  z-index: 10;
+}
+
+.q-answer-header span {
+  padding-right: 10px;
+  z-index: 10;
+}
+
+.q-answer-header:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 230px;
+  right: 0;
+  height: 0.5em;
+  border-top: 2px solid grey;
+  z-index: 10;
+}
+
+.questions{
+  display: block;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  gap: 1%;
+  z-index: 1;
+}
+.correct-answer-animation {
+  animation-name: progressBar;
+  animation-duration: 0.5s;
+  background-color: lightgreen;
+}
+.question {
+  position: relative;
+  display: block;
+  z-index: 3;
+}
+.correct-answer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+.q-text {
+  position: inherit;
+  margin-left: 2%;
+  text-align: left;
+  z-index: 10;
+}
+.answer-text {
+  position: inherit;
+  width: 60%;
+  margin-left: 1.85%;
+  height: 20px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  z-index: 10;
+}
+.answer-submit {
+  position: inherit;
+  width: 36.5%;
+  background-color: white;
+  border: none;
+  border-radius: 3px;
+  height: 25px;
+  border: 2px solid green;
+  color: green;
+  z-index: 10;
+}
+.answer-submit:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+  z-index: 10;
+}
+.answer-submit-correct {
+  background-color: white;
+  color: green;
+  cursor: pointer;
+  z-index: 10;
+}
+.answer-submit-wrong {
+  background-color: red;
+  color: white;
+  border-color: pink;
+  z-index: 10;
+}
+@keyframes progressBar {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+.buttonShake {
+  animation-name: buttonShake;
+  animation-duration: 0.75s;
+}
+@keyframes buttonShake {
+  0% { transform: translateX(0) }
+  25% { transform: translateY(-9px) }
+  35% { transform: translateY(-9px) rotate(5deg) }
+  55% { transform: translateY(-9px) rotate(-5deg) }
+  65% { transform: translateY(-9px) rotate(5deg) }
+  75% { transform: translateY(-9px) rotate(-5deg) }
+  100% { transform: translateY(0) rotate(0) }
+}
+@keyframes expandHeight {
+  0% { height: 60px; }
+  100% { height: 200px; }
+}
+.fadeAway {
+  animation-name: fadeAway;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeAway {
+  0% { opacity: 100%; }
+  100% { opacity: 0%; }
+}
